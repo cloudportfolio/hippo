@@ -1,0 +1,132 @@
+[
+    {
+        "ndc": "00002323401",
+        "chain": [
+            {
+                "name": "doctor",
+                "avg_price": 15877.846382054991
+            },
+            {
+                "name": "health",
+                "avg_price": 11135.955970149254
+            }
+        ]
+    },
+    {
+        "ndc": "00015066812",
+        "chain": [
+            {
+                "name": "health",
+                "avg_price": 17353.42084745763
+            },
+            {
+                "name": "doctor",
+                "avg_price": 6607.1538243626055
+            }
+        ]
+    },
+    {
+        "ndc": "00031074998",
+        "chain": [
+            {
+                "name": "saint",
+                "avg_price": 11330.346704067322
+            },
+            {
+                "name": "doctor",
+                "avg_price": 7205.835829662262
+            }
+        ]
+    },
+    {
+        "ndc": "00046110481",
+        "chain": [
+            {
+                "name": "saint",
+                "avg_price": 12251.450142045454
+            },
+            {
+                "name": "doctor",
+                "avg_price": 12104.674115983029
+            }
+        ]
+    },
+    {
+        "ndc": "00054027225",
+        "chain": [
+            {
+                "name": "saint",
+                "avg_price": 25076.86300390117
+            },
+            {
+                "name": "health",
+                "avg_price": 23761.596843853822
+            }
+        ]
+    },
+    {
+        "ndc": "00078017705",
+        "chain": [
+            {
+                "name": "health",
+                "avg_price": 21918.85662650602
+            },
+            {
+                "name": "doctor",
+                "avg_price": 17333.25101596517
+            }
+        ]
+    },
+    {
+        "ndc": "00093752910",
+        "chain": [
+            {
+                "name": "doctor",
+                "avg_price": 25312.963040446302
+            },
+            {
+                "name": "health",
+                "avg_price": 13109.58667218543
+            }
+        ]
+    },
+    {
+        "ndc": "49884024302",
+        "chain": [
+            {
+                "name": "health",
+                "avg_price": 16283.891622103385
+            },
+            {
+                "name": "doctor",
+                "avg_price": 10691.324066390043
+            }
+        ]
+    },
+    {
+        "ndc": "55154445200",
+        "chain": [
+            {
+                "name": "doctor",
+                "avg_price": 17890.75993006993
+            },
+            {
+                "name": "health",
+                "avg_price": 13373.020067453626
+            }
+        ]
+    },
+    {
+        "ndc": "63323036410",
+        "chain": [
+            {
+                "name": "saint",
+                "avg_price": 34581.59303448276
+            },
+            {
+                "name": "doctor",
+                "avg_price": 18373.56406469761
+            }
+        ]
+    }
+]

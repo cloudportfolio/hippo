@@ -1,0 +1,83 @@
+2025-01-29 13:25:48,282 - INFO - DataProcessor initialized with base path: /Users/patricianati/dev/hippo/data
+2025-01-29 13:25:48,282 - INFO - Starting...
+2025-01-29 13:25:48,282 - INFO - Starting dataset processing.
+2025-01-29 13:25:48,282 - INFO - Processing folder: /Users/patricianati/dev/hippo/data/pharmacies
+2025-01-29 13:25:48,283 - INFO - Loading CSV file: /Users/patricianati/dev/hippo/data/pharmacies/output-09482089-7f1b-4d36-a21f-4652ed460166.csv
+2025-01-29 13:25:48,292 - INFO - CSV file /Users/patricianati/dev/hippo/data/pharmacies/output-09482089-7f1b-4d36-a21f-4652ed460166.csv loaded successfully with 17 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,292 - ERROR - Error saving data to invalid_company.csv: [Errno 2] No such file or directory: ''
+2025-01-29 13:25:48,292 - INFO - Finished processing folder /Users/patricianati/dev/hippo/data/pharmacies. Valid data size: (17, 2).
+2025-01-29 13:25:48,292 - INFO - Processing folder: /Users/patricianati/dev/hippo/data/claims
+2025-01-29 13:25:48,292 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-02fbd8f2-611e-4ffc-983e-a855d5ebec85.json
+2025-01-29 13:25:48,295 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-02fbd8f2-611e-4ffc-983e-a855d5ebec85.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,295 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-090ba3ff-50c8-4488-93ae-1762ab5acf22.json
+2025-01-29 13:25:48,297 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-090ba3ff-50c8-4488-93ae-1762ab5acf22.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,297 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-a99085ad-642d-4740-9843-a05968716231.json
+2025-01-29 13:25:48,300 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-a99085ad-642d-4740-9843-a05968716231.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,300 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-4e3750c3-969f-4b2e-89bf-702635a55711.json
+2025-01-29 13:25:48,303 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-4e3750c3-969f-4b2e-89bf-702635a55711.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,303 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-d3b4f4d8-109f-4a98-9df4-ef50dd223aa2.json
+2025-01-29 13:25:48,314 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-d3b4f4d8-109f-4a98-9df4-ef50dd223aa2.json loaded successfully with 999 valid rows and 1 invalid rows.
+2025-01-29 13:25:48,314 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-f6320eed-35a7-46bb-8c57-59be6146e31f.json
+2025-01-29 13:25:48,318 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-f6320eed-35a7-46bb-8c57-59be6146e31f.json loaded successfully with 999 valid rows and 1 invalid rows.
+2025-01-29 13:25:48,318 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-a4872ad9-2116-4d1b-9228-2abe8bd21e41.json
+2025-01-29 13:25:48,320 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-a4872ad9-2116-4d1b-9228-2abe8bd21e41.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,320 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-d80bec82-2c1b-42cd-9d2a-033016dc54b9.json
+2025-01-29 13:25:48,323 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-d80bec82-2c1b-42cd-9d2a-033016dc54b9.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,323 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-02932f8f-81d1-4b42-a499-401ef5e74f09.json
+2025-01-29 13:25:48,326 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-02932f8f-81d1-4b42-a499-401ef5e74f09.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,326 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-23f3faad-bba5-4098-9e16-6bf1df7a3e93.json
+2025-01-29 13:25:48,329 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-23f3faad-bba5-4098-9e16-6bf1df7a3e93.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,329 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-2f620de6-8807-47bd-8034-13eec976c826.json
+2025-01-29 13:25:48,332 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-2f620de6-8807-47bd-8034-13eec976c826.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,332 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-3e19894f-b470-435d-87e1-39c3ce020ee3.json
+2025-01-29 13:25:48,335 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-3e19894f-b470-435d-87e1-39c3ce020ee3.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,335 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-f4dbddbe-c013-4969-b4c4-7d3ead3a5d62.json
+2025-01-29 13:25:48,337 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-f4dbddbe-c013-4969-b4c4-7d3ead3a5d62.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,337 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-1504b68d-d01f-45b5-8440-a5d42e2f88f6.json
+2025-01-29 13:25:48,340 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-1504b68d-d01f-45b5-8440-a5d42e2f88f6.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,340 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-f8a05606-86a9-4637-b271-6641088a7c97.json
+2025-01-29 13:25:48,343 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-f8a05606-86a9-4637-b271-6641088a7c97.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,343 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-5e6aad02-fc33-4e1f-a86e-19e1acbc6025.json
+2025-01-29 13:25:48,345 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-5e6aad02-fc33-4e1f-a86e-19e1acbc6025.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,345 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-d6e6b4b9-0adf-4912-b7cb-8af0191c1f4d.json
+2025-01-29 13:25:48,348 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-d6e6b4b9-0adf-4912-b7cb-8af0191c1f4d.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,348 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-e78b882d-a997-4523-9515-11c2951aace3.json
+2025-01-29 13:25:48,350 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-e78b882d-a997-4523-9515-11c2951aace3.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,350 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-4c52b7a1-8ac0-41a4-a9ad-93ac88880e03.json
+2025-01-29 13:25:48,353 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-4c52b7a1-8ac0-41a4-a9ad-93ac88880e03.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,353 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-7f5ac389-c136-41cf-ab44-3f429170e10d.json
+2025-01-29 13:25:48,355 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-7f5ac389-c136-41cf-ab44-3f429170e10d.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,356 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-47af1c8b-ff60-4374-b159-35aece43cf54.json
+2025-01-29 13:25:48,358 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-47af1c8b-ff60-4374-b159-35aece43cf54.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,358 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-965e2b8b-0687-445e-b1e7-f52a5a7f9ac4.json
+2025-01-29 13:25:48,360 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-965e2b8b-0687-445e-b1e7-f52a5a7f9ac4.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,361 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-16a00719-232a-4a0a-8057-02c7f6638b4f.json
+2025-01-29 13:25:48,363 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-16a00719-232a-4a0a-8057-02c7f6638b4f.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,363 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-dd95488c-997a-4940-8d86-a1474b66c87b.json
+2025-01-29 13:25:48,365 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-dd95488c-997a-4940-8d86-a1474b66c87b.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,365 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-101d2468-0ec1-4d6b-a8b8-6cd5be2fef41.json
+2025-01-29 13:25:48,368 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-101d2468-0ec1-4d6b-a8b8-6cd5be2fef41.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,368 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-3df2d404-3b8e-41f7-ae92-de55a8f1e902.json
+2025-01-29 13:25:48,369 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-3df2d404-3b8e-41f7-ae92-de55a8f1e902.json loaded successfully with 76 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,369 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-e0d81712-344e-4336-9bce-1240d8a446b1.json
+2025-01-29 13:25:48,371 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-e0d81712-344e-4336-9bce-1240d8a446b1.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,371 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/claims/output-c5965e34-e731-4e7c-aea9-ef214151e08e.json
+2025-01-29 13:25:48,374 - INFO - JSON file /Users/patricianati/dev/hippo/data/claims/output-c5965e34-e731-4e7c-aea9-ef214151e08e.json loaded successfully with 1000 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,376 - ERROR - Error saving data to invalid_claims.json: [Errno 2] No such file or directory: ''
+2025-01-29 13:25:48,376 - INFO - Finished processing folder /Users/patricianati/dev/hippo/data/claims. Valid data size: (27074, 6).
+2025-01-29 13:25:48,389 - INFO - Processing folder: /Users/patricianati/dev/hippo/data/reverts
+2025-01-29 13:25:48,389 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/reverts/output-1d5d70e3-d417-4fea-970d-95c04c64e0d5.json
+2025-01-29 13:25:48,390 - INFO - JSON file /Users/patricianati/dev/hippo/data/reverts/output-1d5d70e3-d417-4fea-970d-95c04c64e0d5.json loaded successfully with 5 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,390 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/reverts/output-5d5a2854-aaf3-460a-bf1a-4e8a90d50c65.json
+2025-01-29 13:25:48,391 - INFO - JSON file /Users/patricianati/dev/hippo/data/reverts/output-5d5a2854-aaf3-460a-bf1a-4e8a90d50c65.json loaded successfully with 101 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,391 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/reverts/output-505e6824-36d3-4f6b-bb2e-4faaf11d7559.json
+2025-01-29 13:25:48,392 - INFO - JSON file /Users/patricianati/dev/hippo/data/reverts/output-505e6824-36d3-4f6b-bb2e-4faaf11d7559.json loaded successfully with 101 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,392 - INFO - Loading JSON file: /Users/patricianati/dev/hippo/data/reverts/output-bcaa2d45-be4e-43ec-af80-9645764a4bd6.json
+2025-01-29 13:25:48,393 - INFO - JSON file /Users/patricianati/dev/hippo/data/reverts/output-bcaa2d45-be4e-43ec-af80-9645764a4bd6.json loaded successfully with 101 valid rows and 0 invalid rows.
+2025-01-29 13:25:48,393 - ERROR - Error saving data to data/invalid_records/invalid_rollback.json: Object of type DataFrame is not JSON serializable
+2025-01-29 13:25:48,393 - INFO - Finished processing folder /Users/patricianati/dev/hippo/data/reverts. Valid data size: (308, 3).
+2025-01-29 13:25:48,393 - INFO - Dataset processing completed.
+2025-01-29 13:25:48,426 - INFO - Data saved to results/analysis_result_29012025_132548.json
+2025-01-29 13:25:48,438 - INFO - Data saved to results/top_chains_29012025_132548.json
+2025-01-29 13:25:48,445 - INFO - Data saved to results/top_prescribed_quantities_29012025_132548.json
+2025-01-29 13:25:48,445 - INFO - Concluded!!!
