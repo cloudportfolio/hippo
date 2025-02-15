@@ -177,6 +177,118 @@ Ref: fact_claim_events.pharmacy_id > dim_pharmacy.id
 Ref: fact_claim_events.drug_id > dim_drug.id
 Ref: fact_claim_events.event_time > dim_time.id
 ```
+
+### Loading the data into the DW using staging tables and type 2 SCD
+
+Schema Overview with Staging
+
+Staging Tables (stg_pharmacy, stg_claims, stg_reverts): Temporary holding tables for raw data
+
+Dimension Tables (dim_pharmacy, dim_drug, dim_time): Slowly Changing Dimension Type 2 (SCD2)
+
+Fact Table (fact_claim_events): Stores event-based transactional data
+
+a. Load data into staging tables
+```sql
+-- Load Pharmacy Data into Staging
+TRUNCATE TABLE stg_pharmacy;
+INSERT INTO stg_pharmacy (id, chain)
+SELECT DISTINCT id, chain FROM pharmacy_schema;
+
+-- Load Claims Data into Staging
+TRUNCATE TABLE stg_claims;
+INSERT INTO stg_claims (id, npi, ndc, price, quantity, timestamp)
+SELECT id, npi, ndc, price, quantity, timestamp FROM claims_event_schema;
+
+-- Load Reverts Data into Staging
+TRUNCATE TABLE stg_reverts;
+INSERT INTO stg_reverts (id, claim_id, timestamp)
+SELECT id, claim_id, timestamp FROM revert_event_schema;
+```
+Truncating staging tables first will ensure the staging table always hold the latest data
+
+b. Transform & Load Dimensions (Slowly Changing Dimension Type 2)
+
+```sql
+-- Load into dim_pharmacy (SCD Type 2: Insert new, Update expired)
+INSERT INTO dim_pharmacy (npi, chain, valid_from, valid_to)
+SELECT s.npi, s.chain, CURRENT_TIMESTAMP, NULL
+FROM stg_pharmacy s
+LEFT JOIN dim_pharmacy d ON s.npi = d.npi
+WHERE d.npi IS NULL; -- Insert only new records
+
+UPDATE dim_pharmacy
+SET valid_to = CURRENT_TIMESTAMP
+WHERE npi IN (SELECT npi FROM stg_pharmacy) AND valid_to IS NULL;
+```
+Type 2 SCD in this case is useful as it inserts new records while marking existing records as expired (valid_to is updated).
+
+c. Populate dim_drug dimension
+```sql
+-- Load into dim_drug (SCD Type 2)
+INSERT INTO dim_drug (ndc, drug_name, valid_from, valid_to)
+SELECT s.ndc, 'Unknown Drug', CURRENT_TIMESTAMP, NULL
+FROM stg_claims s
+LEFT JOIN dim_drug d ON s.ndc = d.ndc
+WHERE d.ndc IS NULL;
+
+UPDATE dim_drug
+SET valid_to = CURRENT_TIMESTAMP
+WHERE ndc IN (SELECT ndc FROM stg_claims) AND valid_to IS NULL;
+```
+Drug names might be missing initially, requiring an enrichment process later.
+
+d. Populate dim_time table
+
+```sql
+-- Load into dim_time (Ensuring unique time records)
+INSERT INTO dim_time (date, day_of_week, month, year, hour, quarter)
+SELECT DISTINCT
+    DATE(timestamp) AS date,
+    EXTRACT(DOW FROM timestamp) AS day_of_week,
+    EXTRACT(MONTH FROM timestamp) AS month,
+    EXTRACT(YEAR FROM timestamp) AS year,
+    TO_CHAR(timestamp, 'HH24') AS hour,
+    EXTRACT(QUARTER FROM timestamp) AS quarter
+FROM stg_claims
+ON CONFLICT (date, hour) DO NOTHING; -- Avoid duplicate inserts
+```
+e. Load data into fact_claims_events
+```sql
+-- Insert claims into fact_claim_events
+INSERT INTO fact_claim_events (claim_id, pharmacy_id, drug_id, price, quantity, is_reverted, event_time, event_type)
+SELECT 
+    c.id AS claim_id,
+    p.id AS pharmacy_id,
+    d.id AS drug_id,
+    c.price,
+    c.quantity,
+    FALSE AS is_reverted,
+    t.id AS event_time,
+    'CLAIMED' AS event_type
+FROM stg_claims c
+JOIN dim_pharmacy p ON c.npi = p.npi
+JOIN dim_drug d ON c.ndc = d.ndc
+JOIN dim_time t ON DATE(c.timestamp) = t.date AND TO_CHAR(c.timestamp, 'HH24') = t.hour;
+```
+
+```sql
+-- Insert reverts into fact_claim_events
+INSERT INTO fact_claim_events (claim_id, pharmacy_id, drug_id, price, quantity, is_reverted, event_time, event_type)
+SELECT 
+    r.claim_id AS claim_id,
+    fc.pharmacy_id,
+    fc.drug_id,
+    fc.price,
+    fc.quantity,
+    TRUE AS is_reverted,
+    t.id AS event_time,
+    'REVERTED' AS event_type
+FROM stg_reverts r
+JOIN fact_claim_events fc ON r.claim_id = fc.claim_id
+JOIN dim_time t ON DATE(r.timestamp) = t.date AND TO_CHAR(r.timestamp, 'HH24') = t.hour;
+```
+
 ### Queries
 
 1. Get the total quantity of claimed drugs for a specific pharmacy within a given time period:
